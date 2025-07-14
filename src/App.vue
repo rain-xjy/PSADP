@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-aside width="200px">
-      <div class="logo">IoT Platform</div>
+      <div class="logo">PSADP</div>
       <el-menu
         router
         :default-active="$route.path"
@@ -9,7 +9,7 @@
         background-color="#304156"
         text-color="#bfcbd9"
         active-text-color="#409EFF">
-        <el-menu-item index="/dashboard">
+        <!-- <el-menu-item index="/dashboard">
           <el-icon><DataLine /></el-icon>
           <span>仪表盘</span>
         </el-menu-item>
@@ -28,11 +28,27 @@
         <el-menu-item index="/dataset">
           <el-icon><Document /></el-icon>
           <span>数据集管理</span>
-        </el-menu-item>
+        </el-menu-item> -->
+          <el-menu-item index="/Charge">
+            <el-icon><Document /></el-icon>
+            <span>充电指标展示</span>
+          </el-menu-item>
+          <el-menu-item index="/Discharge">
+            <el-icon><Document /></el-icon>
+            <span>放电指标展示</span>
+          </el-menu-item>
+          <el-menu-item index="/Motionless">
+            <el-icon><Document /></el-icon>
+            <span>静止指标展示</span>
+          </el-menu-item>
+          <el-menu-item index="/Other">
+            <el-icon><Document /></el-icon>
+            <span>其他指标展示</span>
+          </el-menu-item>
       </el-menu>
     </el-aside>
     <el-container>
-      <el-header>物联网监控平台</el-header>
+      <el-header>应用测试AppTest48</el-header>
       <el-main>
         <router-view></router-view>
       </el-main>
@@ -49,10 +65,12 @@ import { DataLine, Monitor, Document, Comment } from '@element-plus/icons-vue'
   height: 100vh;
 }
 .el-header {
-  background-color: #409EFF;
-  color: white;
+  color: black;
   line-height: 60px;
   font-size: 20px;
+  display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: flex-end;
 }
 .el-aside {
   background-color: #304156;
