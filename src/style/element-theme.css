@@ -1,0 +1,27 @@
+:root {
+  --el-color-primary: #F56C6C !important;
+  --el-color-primary-light-3: #F89898 !important;
+  --el-color-primary-light-5: #FAB6B6 !important;
+  --el-color-primary-light-7: #FCD3D3 !important;
+  --el-color-primary-light-8: #FDE2E2 !important;
+  --el-color-primary-light-9: #FEF0F0 !important;
+  --el-color-primary-dark-2: #C45656 !important;
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--el-color-primary);
+  --el-button-border-color: var(--el-color-primary);
+  --el-button-hover-bg-color: var(--el-color-primary-light-3);
+  --el-button-hover-border-color: var(--el-color-primary-light-3);
+  --el-button-active-bg-color: var(--el-color-primary-dark-2);
+  --el-button-active-border-color: var(--el-color-primary-dark-2);
+}
+
+.el-button--primary.is-plain {
+  --el-button-bg-color: var(--el-color-primary-light-9);
+  --el-button-border-color: var(--el-color-primary-light-5);
+  --el-button-hover-bg-color: var(--el-color-primary);
+  --el-button-hover-border-color: var(--el-color-primary);
+  --el-button-active-bg-color: var(--el-color-primary-dark-2);
+  --el-button-active-border-color: var(--el-color-primary-dark-2);
+}

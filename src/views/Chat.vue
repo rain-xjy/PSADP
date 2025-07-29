@@ -277,10 +277,11 @@
       </el-table>
     </div>
   </el-dialog>
+
 </template>
 
 <script setup>
-import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
+import { ref, onMounted, watch, nextTick, onUnmounted, reactive, computed } from 'vue'
 import { Plus, ChatDotRound, CopyDocument, CaretBottom, Edit, Delete } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import Plotly from 'plotly.js-dist'
@@ -602,6 +603,8 @@ const handleConfirmation = (message) => {
   console.log('latestChartConfig', latestChartConfig.value)
 
 }
+
+
 
 
 onMounted(() => {

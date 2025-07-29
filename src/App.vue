@@ -29,6 +29,13 @@
           <el-icon><Document /></el-icon>
           <span>数据集管理</span>
         </el-menu-item> -->
+        
+        <!-- 指标展示菜单组 -->
+        <el-sub-menu index="1">
+          <template #title>
+            <el-icon><DataLine /></el-icon>
+            <span>指标展示</span>
+          </template>
           <el-menu-item index="/Charge">
             <el-icon><Document /></el-icon>
             <span>充电指标展示</span>
@@ -45,6 +52,51 @@
             <el-icon><Document /></el-icon>
             <span>其他指标展示</span>
           </el-menu-item>
+          <el-menu-item index="/QuickQuery">
+            <el-icon><Document /></el-icon>
+            <span>数据看板</span>
+          </el-menu-item>
+          <el-menu-item index="/Download">
+            <el-icon><Document /></el-icon>
+            <span>数据下载</span>
+          </el-menu-item>
+        </el-sub-menu>
+        
+        <!-- 异常模块分析菜单组 -->
+        <el-sub-menu index="2">
+          <template #title>
+            <el-icon><Warning /></el-icon>
+            <span>异常模块分析</span>
+          </template>
+          <el-menu-item index="/insulation">
+            <el-icon><Document /></el-icon>
+            <span>绝缘情况分析</span>
+          </el-menu-item>
+          <el-menu-item index="/voltage">
+            <el-icon><Document /></el-icon>
+            <span>过压欠压分析</span>
+          </el-menu-item>
+          <el-menu-item index="/temperature">
+            <el-icon><Document /></el-icon>
+            <span>温度分析</span>
+          </el-menu-item>
+          <el-menu-item index="/current">
+            <el-icon><Document /></el-icon>
+            <span>电流分析</span>
+          </el-menu-item>
+          <el-menu-item index="/resistance">
+            <el-icon><Document /></el-icon>
+            <span>直流内阻分析</span>
+          </el-menu-item>
+          <el-menu-item index="/throughput">
+            <el-icon><Document /></el-icon>
+            <span>吞吐量统计</span>
+          </el-menu-item>
+        </el-sub-menu>
+        <el-menu-item index="general-calculation">
+          <i class="el-icon-menu"></i>
+          <span slot="title">数据筛选</span>
+       </el-menu-item>
       </el-menu>
     </el-aside>
     <el-container>
@@ -57,7 +109,7 @@
 </template>
 
 <script setup>
-import { DataLine, Monitor, Document, Comment } from '@element-plus/icons-vue'
+import { DataLine, Monitor, Document, Comment, Warning } from '@element-plus/icons-vue'
 </script>
 
 <style>
@@ -91,7 +143,7 @@ import { DataLine, Monitor, Document, Comment } from '@element-plus/icons-vue'
 .el-menu-item {
   height: 56px;
   line-height: 56px;
-  margin: 4px 0;
+  margin-bottom: 1px ;
 }
 .el-menu-item:hover {
   background-color: #263445 !important;
@@ -103,5 +155,29 @@ import { DataLine, Monitor, Document, Comment } from '@element-plus/icons-vue'
 .el-menu-item .el-icon {
   margin-right: 10px;
   font-size: 18px;
+}
+
+/* 子菜单样式 */
+.el-sub-menu__title {
+  height: 56px;
+  line-height: 56px;
+  margin: 4px 0;
+}
+
+.el-sub-menu__title:hover {
+  background-color: #263445 !important;
+}
+
+.el-sub-menu.is-active .el-sub-menu__title {
+  color: #409EFF !important;
+}
+
+.el-sub-menu .el-menu-item {
+  min-width: 200px;
+  background-color: #1f2d3d;
+}
+
+.el-sub-menu .el-menu-item:hover {
+  background-color: #001528 !important;
 }
 </style>

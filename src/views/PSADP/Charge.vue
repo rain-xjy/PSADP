@@ -49,12 +49,12 @@ const vins = ref([
 
 // 车型数据
 const models = ref([
-  'Model S',
-  'Model 3',
-  'Model X',
-  'Model Y',
-  'Cybertruck',
-  'Roadster'
+  '车型1',
+  '车型2',
+  '车型3',
+  '车型4',
+  '车型5',
+  '车型6'
 ])
 
 // 表格数据
